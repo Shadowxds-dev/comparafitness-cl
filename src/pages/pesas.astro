@@ -1,0 +1,33 @@
+---
+import CategoryPage from "../components/CategoryPage.astro";
+import { products } from "../data/products";
+
+const pesas = products.filter((p) => p.type === "pesas");
+---
+
+<CategoryPage
+  type="pesas"
+  path="/pesas/"
+  title="Mejores Mancuernas y Pesas para Casa en Chile 2026"
+  metaDescription="Comparamos mancuernas, sets ajustables y kettlebells disponibles en Mercado Libre Chile. Peso total, material, precios en CLP y ficha técnica completa."
+  h1="Pesas, mancuernas y kettlebells"
+  intro={[
+    "Armar un rincón de pesas en casa es una de las formas más baratas de entrenar fuerza a largo plazo, pero elegir mal el peso total o el tipo de set puede hacer que te quedes corto en pocos meses. Comparamos sets ajustables, kettlebells y pesas de lastre disponibles en Mercado Libre Chile.",
+    "Si recién empiezas, un set de 20 kg ajustable suele ser suficiente para los primeros meses; si ya entrenas con regularidad, conviene ir directo a un set de 30 kg o más, o sumar un kettlebell para variar los movimientos.",
+  ]}
+  faqs={[
+    {
+      q: "¿Cuánto peso necesito para empezar en casa?",
+      a: "Para principiantes, un set ajustable de 20 kg total (dividido en dos mancuernas) cubre la mayoría de ejercicios básicos de tren superior. Si buscas trabajar piernas o ya tienes algo de fuerza, conviene partir con 30 kg o más.",
+    },
+    {
+      q: "¿Mancuernas ajustables o fijas?",
+      a: "Las ajustables (con discos) ocupan menos espacio y crecen contigo a medida que ganas fuerza, aunque cambiar el peso toma más tiempo que con mancuernas fijas. Para uso en casa con espacio limitado, las ajustables suelen ser la mejor opción.",
+    },
+    {
+      q: "¿Para qué sirve un kettlebell frente a una mancuerna normal?",
+      a: "El kettlebell está pensado para movimientos balísticos y dinámicos (swings, snatches) por su centro de masa desplazado, mientras que la mancuerna es mejor para movimientos de fuerza más controlados y aislados.",
+    },
+  ]}
+  products={pesas}
+/>

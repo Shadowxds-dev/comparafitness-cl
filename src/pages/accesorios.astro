@@ -1,0 +1,33 @@
+---
+import CategoryPage from "../components/CategoryPage.astro";
+import { products } from "../data/products";
+
+const accesorios = products.filter((p) => p.type === "accesorio");
+---
+
+<CategoryPage
+  type="accesorio"
+  path="/accesorios/"
+  title="Accesorios de Entrenamiento en Chile: Bandas, Cuerdas y Más"
+  metaDescription="Comparamos bandas de resistencia, cuerdas de saltar y mini trampolines disponibles en Mercado Libre Chile. Precios en CLP y ficha comparativa."
+  h1="Accesorios de entrenamiento"
+  intro={[
+    "No todo el entrenamiento en casa requiere máquinas grandes: bandas de resistencia, cuerdas de saltar y mini trampolines son accesorios de bajo costo que caben en un cajón y permiten entrenar fuerza y cardio sin gastar en equipos grandes.",
+    "Son también la mejor puerta de entrada al fitness en casa: antes de invertir en una bicicleta o un set de pesas grande, estos accesorios permiten probar la constancia de entrenar en casa con una inversión mínima.",
+  ]}
+  faqs={[
+    {
+      q: "¿Las bandas de resistencia reemplazan a las pesas?",
+      a: "No completamente, pero cubren un rango amplio de ejercicios de fuerza, especialmente para principiantes o para trabajar movilidad y activación antes de entrenar con pesas.",
+    },
+    {
+      q: "¿Qué diferencia hay entre bandas loop y bandas con asas?",
+      a: "Las bandas loop (círculo cerrado) son ideales para piernas, glúteos y dominadas asistidas. Las bandas con asas se usan más para ejercicios de tren superior tipo remo o press, similar a un cable de gimnasio.",
+    },
+    {
+      q: "¿Un mini trampolín sirve para bajar de peso?",
+      a: "Ayuda como parte de una rutina de cardio de bajo impacto, quemando calorías de forma más suave para las articulaciones que correr, pero como cualquier cardio, funciona mejor combinado con una alimentación acorde a tu objetivo.",
+    },
+  ]}
+  products={accesorios}
+/>

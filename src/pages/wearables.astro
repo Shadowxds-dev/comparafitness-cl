@@ -1,0 +1,33 @@
+---
+import CategoryPage from "../components/CategoryPage.astro";
+import { products } from "../data/products";
+
+const wearables = products.filter((p) => p.type === "wearable");
+---
+
+<CategoryPage
+  type="wearable"
+  path="/wearables/"
+  title="Mejores Relojes y Bandas Deportivas en Chile 2026"
+  metaDescription="Comparamos smartwatches y bandas deportivas Samsung, Huawei y más disponibles en Mercado Libre Chile. Autonomía, sensores, precios en CLP."
+  h1="Relojes y bandas deportivas"
+  intro={[
+    "Un reloj deportivo bien elegido ayuda a mantener la constancia al mostrar progreso real (pasos, frecuencia cardíaca, sueño), pero la diferencia de precio entre modelos suele venir de la precisión de sensores y la duración de batería, no solo del diseño.",
+    "Si solo quieres seguimiento básico de pasos y notificaciones, una opción económica cubre bien la necesidad; si entrenas con objetivos específicos (frecuencia cardíaca en zonas, sueño detallado), conviene invertir en una marca con sensores más precisos como Samsung o Huawei.",
+  ]}
+  faqs={[
+    {
+      q: "¿Banda deportiva o smartwatch completo?",
+      a: "Las bandas deportivas (como Galaxy Fit o Huawei Band) priorizan batería larga y precio accesible con función deportiva completa. Los smartwatches completos suman más funciones (apps, pagos) pero con menor autonomía y mayor precio.",
+    },
+    {
+      q: "¿Qué tan precisos son los sensores de frecuencia cardíaca de estos relojes?",
+      a: "Los de marcas reconocidas (Samsung, Huawei) son razonablemente precisos para entrenamiento recreativo, aunque ninguno iguala la precisión de una banda de pecho dedicada para entrenamiento de alto rendimiento.",
+    },
+    {
+      q: "¿Necesito resistencia al agua para nadar?",
+      a: "Sí, busca al menos 5 ATM si planeas nadar con el reloj puesto. Los modelos con solo certificación IP67 resisten salpicaduras y lluvia, pero no immersión prolongada.",
+    },
+  ]}
+  products={wearables}
+/>

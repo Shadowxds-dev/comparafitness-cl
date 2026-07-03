@@ -1,0 +1,33 @@
+---
+import CategoryPage from "../components/CategoryPage.astro";
+import { products } from "../data/products";
+
+const cardio = products.filter((p) => p.type === "cardio");
+---
+
+<CategoryPage
+  type="cardio"
+  path="/cardio/"
+  title="Mejores Bicicletas Estáticas y de Spinning en Chile 2026"
+  metaDescription="Comparamos bicicletas estáticas, magnéticas y de spinning disponibles en Mercado Libre Chile. Resistencia, peso del volante, precios en CLP y ficha técnica completa."
+  h1="Bicicletas estáticas y de spinning"
+  intro={[
+    "El peso del volante de inercia (o disco) es la variable que más determina si el pedaleo se siente fluido o entrecortado, y suele ser lo que menos se compara al comprar una bici para casa. Comparamos desde mini pedaleras compactas hasta bicicletas de spinning con transmisión por cadena.",
+    "Para cardio ligero o rehabilitación, una pedalera compacta o una bici magnética básica es suficiente; para entrenar de forma seria o seguir clases de indoor cycling, conviene priorizar un volante pesado (12kg o más) y transmisión por cadena.",
+  ]}
+  faqs={[
+    {
+      q: "¿Qué peso de volante necesito?",
+      a: "Para uso ligero, 4-6 kg es suficiente. Para spinning intenso o simular la sensación de una bici de gimnasio, busca 15 kg o más — el pedaleo se siente notablemente más fluido y constante.",
+    },
+    {
+      q: "¿Resistencia magnética o por fricción, cuál es mejor?",
+      a: "La resistencia magnética es más silenciosa y con menor mantenimiento, ideal para departamentos. La resistencia por fricción (perilla) suele permitir mayor intensidad máxima, preferida en spinning intenso.",
+    },
+    {
+      q: "¿Vale la pena una bicicleta plegable?",
+      a: "Sí si tienes espacio limitado y no vas a usarla todos los días. Si entrenas a diario y tienes espacio dedicado, una bici fija no plegable suele ser más estable y duradera a largo plazo.",
+    },
+  ]}
+  products={cardio}
+/>
