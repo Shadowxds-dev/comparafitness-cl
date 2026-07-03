@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://comparafitness.cl',
+  site: 'https://fitness-comparador.vercel.app',
   integrations: [react(), sitemap()],
 
   vite: {

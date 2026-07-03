@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://comparafitness.cl/sitemap-index.xml
+Sitemap: https://fitness-comparador.vercel.app/sitemap-index.xml
